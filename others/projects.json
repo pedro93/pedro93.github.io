@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Commodore",
+    "description": "A modified version of the commodore game implemented in a minix enviroment",
+    "link": "https://github.com/pedro93/LCOM",
+    "tags": ["C","Minix"]
+  },
+  {
+    "name": "DragonMaze",
+    "description": "A pacman-style game with random maze generation",
+    "link": "https://bitbucket.org/cmatias/lpoo/src/c0762080017b3d049d5b64e47c65cd3eb8db2103/DragonMaze/?at=master",
+    "tags": ["Java"]
+  },
+  {
+    "name": "TrapShooter",
+    "description": "A simple point and shoot game for Android devices",
+    "link": "https://bitbucket.org/cmatias/lpoo/src/c0762080017b3d049d5b64e47c65cd3eb8db2103/TrapShooter/?at=master",
+    "tags": ["Java","Android"]
+  },
+  {
+    "name": "CYKParser",
+    "description": "A CYK Parser with the capability of parsing and validating an input string (sentence) using the CYK Algorithm, in a CNF (Chosmky Normal Form).",
+    "link": "https://github.com/pedro93/COMP",
+    "tags": ["Java","JavaCC"]
+  },
+  {
+    "name": "FeupHub",
+    "description": "Q&A platform for college students at FEUP",
+    "link": "https://bitbucket.org/rydeen/feuphub",
+    "tags": ["Node.js","Ember.js","MySQL"]
+  }
+]

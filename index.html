@@ -1,7 +1,62 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en" class="no-js">
+	<head>
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-15">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Pedro Cardoso Lessa Silva</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" >
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+	<link rel="stylesheet" type="text/css" href="css/demo.css" >
+	<link rel="stylesheet" type="text/css" href="css/component.css" >
+	
+	<!-- Jquery fallback -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js><\/script>')</script>
+	<!-- For page refresh on css change -->
+	<script src='js/script.js'></script>
+	</head>
+	<body>
+	
+	<div class='box_container'>
+		<div class="ajax_loader">
+			<div class='image_div left'></div>
+			<div class='image_div right'></div>
+			<img class="loadingAnimation" src="spinner_squares_circle.svg" alt="Loading">
+		</div>
+		
+		<!--START THE MAIN CONTAINER-->	
+		<div class='data'>
+			<div id="perspective" class="perspective effect-airbnb">
+				<div class="container">
+					<div class="wrapper"><!-- wrapper needed for scroll -->
+						<header class="codrops-header">
+							<div id="background-header"></div>
+							<div id="title-header"><h1>Pedro Silva <span>A computer science engineer</span></h1></div>
+						</header>
+						<div class="content">
+							<button id="showMenu">Menu</button>
+							<div id="region">
+							</div>
+						</div>
+					</div><!-- wrapper -->
+				</div><!-- /container -->
+				<nav class="outer-nav left vertical">
+					<a href="" class="icon-home">About</a>
+					<a href="" class="icon-image">Portfolio</a>
+					<a href="" class="icon-mail">Contact</a>
+				</nav>
+			</div><!-- /perspective -->
+		</div>
+		<!--END THE MAIN CONTAINER,-->
+	</div>
+	
+	<!--INCLUDE MAIN PAGE FILE DEPENDENCY-->
+	<script src="js/modernizr.custom.25376.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/jquery.color.min.js"></script>
+	</body>
 </html>

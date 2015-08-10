@@ -1,0 +1,81 @@
+<h3>Experience</h3>
+<p>
+	Being a student at the moment, I have been mainly focusing on college and the projects I've done there. 
+	However I do have some personal projects and experience outside the academic life. <br>
+	For instance last summer, I worked for a company called <a href="http://www.criticalmanufacturing.com/pt/homepage" target="_blank">Critical Manufacturing</a>
+	as an intern where I have learned a lot about that particular business.<br>
+	I intend to continue working as an intern during my summer vacations, simply because of the vast amount of experience I get from it and to become a better engineer.
+</p>
+<h3>What I've done</h3>
+<p>As part of coursework or personal ideas, I developed a few projects some of which you may find below:</p>
+<div id="CollegeProjects">
+<h4>During college</h4>
+
+	<dl>
+	</dl>
+</div>
+<div id="PersonalProjects">
+	<h4>Some personal projects</h4>
+	<ul>
+		<li>A pharmacy quiz generator for a given excel document containing the relationships between drugs and their groups (<a href="https://github.com/pedro93/ifarmaStudents" target="_blank">Check it out</a>).</li>
+		<li>A free class room finder for FEUP students (still in development).</li>
+		<li>This website you are on!</li>
+	</ul>
+</div>
+<div id="OtherProjects">
+	<h4>Others</h4>
+	<dl>
+		<dt>Position: Summer Internship</dt>
+		<dd>Where: <a href="http://www.criticalmanufacturing.com/pt/homepage" target="_blank">Critical Manufacturing</a></dd>
+		<dd>Role: Developing a STDF Comparator</dd>
+		<dd>Description: Created a unix diff-like utility tool and helped develop the underlying I/O (input and output) library to compare between 2 Standard Test Data Format (STDF) files.
+			<br> Enables comparison between 2 15GB binary files in under 15 minutes with exhaustive search and comparison. 
+			<br>For reasonably small file sizes (~5-10MB) results are given in 2-3 seconds.</dd>
+	</dl>
+</div>
+<br>
+<p>
+	Keep in mind that not all projects I have collaborated on, are here due to privacy and copyright concerns, or simply because I don't feel they are quite good enough.<br>
+	If you want to find out what other projects I've done since, or may simply be under development, which I have not included, check out my repositories:
+</p>
+<ol style="list-style-type:none">
+ <li><a href="http://github.com/pedro93" target="_blank">GitHub </a></li>
+ <li><a href="http://bitbucket.org/Pedro_93" target="_blank">BitBucket</a></li>
+</ol>
+<br>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script> 
+
+<script>
+	loadProjects();
+	
+	function loadProjects(){
+		console.log(document.URL);
+		var pos = document.URL.indexOf("index.html");
+		var path;
+		if(pos==-1)
+			path = document.URL+"others/projects.json";
+		else
+			path = document.URL.substring(0,pos-1)+"/others/projects.json";
+		console.log(path);
+		$.ajax({
+			url: path,
+			success: function (data) {
+				var htmlElement = $("#CollegeProjects dl");
+				
+				var arrayProjs = data;
+				if(arrayProjs.constructor === "test".constructor)
+					arrayProjs = JSON.parse(data);
+				arrayProjs.forEach(function(entry){
+					htmlElement.append(
+						"<dt>Project: "+ entry.name +"</dt>"+
+						"<dd>Description: "+entry.description+"</dd>"+
+						'<dd>Link: <a href="'+entry.link+'" target="_blank"> Repository</a> </dd>'+
+						"<dd>Tags: "+entry.tags+"</dd><br>"
+					);
+				});
+			}
+		});
+		return;
+	}
+</script>
+</script>
